@@ -50,5 +50,8 @@
     <Compile Include="SortByPopulation.cs" />
     <Compile Include="State.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
