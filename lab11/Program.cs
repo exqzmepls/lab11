@@ -302,15 +302,15 @@ namespace lab11
             Console.Clear();
 
             Console.WriteLine("Поиск первого элемента в Коллекции1<TKey>...");
-            Console.WriteLine(tc.Collection00Contains((State)tc.Collection00First.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection00Contains(tc.Collection00First, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск центрального элемента в Коллекции1<TKey>...");
-            Console.WriteLine(tc.Collection00Contains((State)tc.Collection00Middle.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection00Contains(tc.Collection00Middle, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск последнего элемента в Коллекции1<TKey>...");
-            Console.WriteLine(tc.Collection00Contains((State)tc.Collection00Last.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection00Contains(tc.Collection00Last, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск элемента, не входящего в Коллекцию1<TKey>...");
@@ -336,15 +336,15 @@ namespace lab11
             Console.ReadLine();
 
             Console.WriteLine("Поиск по ключу первого элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsKey((State)tc.Collection10First.Key.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsKey(tc.Collection10First.Key, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по ключу центрального элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsKey((State)tc.Collection10Middle.Key.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsKey(tc.Collection10Middle.Key, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по ключу последнего элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsKey((State)tc.Collection10Last.Key.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsKey(tc.Collection10Last.Key, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по ключу элемента, не входящего в Коллекцию2<TKey, TValue>...");
@@ -353,19 +353,19 @@ namespace lab11
             Console.ReadLine();
 
             Console.WriteLine("Поиск по значению первого элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsValue((Republic)tc.Collection10First.Value.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsValue(tc.Collection10First.Value, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по значению центрального элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsValue((Republic)tc.Collection10Middle.Value.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsValue(tc.Collection10Middle.Value, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по значению последнего элемента в Коллекции2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsValue((Republic)tc.Collection10Last.Value.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsValue(tc.Collection10Last.Value, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
 
             Console.WriteLine("Поиск по значению элемента, не входящего в Коллекцию2<TKey, TValue>...");
-            Console.WriteLine(tc.Collection10ContainsValue((Republic)tc.NotIncluded.Clone(), out time) ? "Найден" : "Не найден");
+            Console.WriteLine(tc.Collection10ContainsValue(tc.NotIncluded, out time) ? "Найден" : "Не найден");
             Console.WriteLine($"Затраченное время (в тиках) - {time}\n");
             Console.ReadLine();
 

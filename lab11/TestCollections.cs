@@ -33,10 +33,7 @@ namespace lab11
         {
             if (count < 5)
             {
-                collection00 = null;
-                collection01 = null;
-                collection10 = null;
-                collection11 = null;
+                throw new Exception("Очень мало элементов для создания коллекций.");
             }
             else
             {
@@ -182,7 +179,7 @@ namespace lab11
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            bool result = collection00.Contains(state);
+            bool result = collection00.Contains(state.Clone());
             sw.Stop();
             ticks = sw.ElapsedTicks;
             return result;
@@ -202,7 +199,7 @@ namespace lab11
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            bool result = collection10.ContainsKey(state);
+            bool result = collection10.ContainsKey((State)state.Clone());
             sw.Stop();
             ticks = sw.ElapsedTicks;
             return result;
@@ -212,7 +209,7 @@ namespace lab11
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            bool result = collection10.ContainsValue(republic);
+            bool result = collection10.ContainsValue((Republic)republic.Clone());
             sw.Stop();
             ticks = sw.ElapsedTicks;
             return result;
